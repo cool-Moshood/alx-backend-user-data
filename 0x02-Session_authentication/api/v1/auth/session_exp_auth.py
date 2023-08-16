@@ -22,7 +22,7 @@ class SessionExpAuth(SessionAuth):
         from datetime import datetime
         try:
             session_id = super().create_session(user_id)
-        except:
+        except Exception:
             session_id = None
 
         if not session_id:
